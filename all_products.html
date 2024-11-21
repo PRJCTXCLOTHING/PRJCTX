@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="#" id="toggle-nav">PRJCT X</a></h1>
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all_products.html">Shop all</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+  
+    <!-- All Products Section -->
+    <section id="all-products">
+      
+      <div class="product-grid" id="all-product-grid">
+        <!-- All products will be dynamically inserted here by JavaScript -->
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 PRJCT X. All rights reserved.</p>
+    </footer>
+  
+    <script src="scripts.js"></script>
+    <script src="products.js"></script> <!-- Link to the products JavaScript file -->
+    <script>
+      // Initialize the display of all products on the all-products page
+      window.onload = function() {
+        displayProducts("all"); // Call the function to display all 6 products
+      };
+    </script>
+  </body>
+  
+  
+</html>

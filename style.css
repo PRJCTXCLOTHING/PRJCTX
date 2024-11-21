@@ -1,0 +1,654 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {/* Apply Playfair Display font to the entire body */
+    body {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400; /* Regular weight */
+      color: #333; /* Set a dark color for readability */
+    }
+    
+    /* Apply Playfair Display bold weight to headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; /* Bold weight for headings */
+      text-transform: uppercase; /* Optional: makes headings uppercase */
+      letter-spacing: 2px; /* Optional: adds spacing between letters */
+    }
+    
+    /* Style paragraphs with Playfair Display */
+    p {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400; /* Regular weight for paragraphs */
+      line-height: 1.7; /* Adjust line height for better readability */
+    }
+    
+    /* Optional: Add custom styling to other elements like links */
+    a {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    /* Add more styling as needed for other elements */
+    
+  
+  color: #000000;
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-color: #f0f0f0; /* Light gray fallback background */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title Screen Styles */
+.title-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%; /* Ensure it takes the full width */
+  text-align: center;
+  background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.title-screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-screen img {
+  width: 100%;
+  max-width: 250px;
+  max-height: auto;
+  margin: 20px 0;
+}
+
+/* Button Styling */
+.enter-shop-btn {
+  padding: 12px 24px;                   /* Size of the button */
+  font-size: 16px;                      /* Font size */
+  font-weight: bold;                    /* Bold text */
+  color: #000000;                       /* Text color */
+  background-color: #ffffff;            /* Button background color */
+  border: 2px solid #000000;
+  border-radius: 20px;                  /* Adjusts how round the corners are */
+  cursor: pointer;                      /* Pointer cursor */
+  transition: all 0.3s ease;            /* Smooth transition for hover */
+}
+
+/* Hover effect */
+.enter-shop-btn:hover {
+  background-color: #555555;            /* Slightly different color on hover */
+  transform: scale(1.05);               /* Increases button size a bit */
+}
+
+
+.enter-shop-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Main Content */
+.main-content {
+  display: none; /* Initially hidden */
+}
+
+/* Reset Header Styles */
+header {
+  background-color: transparent; /* Make header transparent */
+  color: #000000;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  position: fixed; /* Make the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make sure it spans the full width */
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Optional: Add some padding to the body to prevent content from being hidden under the header */
+body {
+  padding-top: 60px; /* Adjust this value to match the height of your header */
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: transparent;
+  color: #000000;
+  padding: 0; /* Removed extra padding */
+  margin-top: 0; /* No space above */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  top: -300px; /* Move the hero section up */
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.shop-now-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.shop-now-button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Featured Products Section */
+#featured,
+#products {
+  padding: 0rem;
+  text-align: center;
+  position: relative;
+  top: 0px; /* Move the hero section up */
+}
+
+#featured h3,
+#products h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.product-item button {
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #131213;
+}
+
+/* About Section */
+#about {
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem;
+}
+
+#contact form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#contact label {
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#contact button {
+  padding: 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#contact button:hover {
+  background-color: #000000;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .enter-shop-btn {
+    font-size: 1.25rem;
+    padding: .75rem 2rem;
+    max-width: 300px; /* Reduced max width on small screens */
+  }
+}
+
+.logo {
+  display: block;
+  margin: 10% auto; /* Reduced top margin to bring it closer */
+  width: 200px;
+  height: 200px;
+  background-image: url("images/PRJCT_X.PNG");
+  background-size: cover;
+  border-radius: 50%;
+  animation: spin 4s infinite linear;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+/* All Products Section */
+#all-products {
+  padding: 1rem;
+  text-align: center;
+}
+
+#all-products h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1.5rem; /* Space between products */
+  margin-top: 1.5rem;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.product-item button {
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #131213;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+}
+.underline-link {
+    text-decoration: underline;
+  }
+  /* Container for image and navigation buttons */
+#image-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically if the container has height */
+    text-align: center;
+    flex-direction: column; /* Stack image and buttons vertically */
+    margin: 0 auto;         /* Center the container itself */
+  }
+  
+  /* Ensure buttons are positioned side-by-side */
+  #image-container .pinkpicture {
+        display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between buttons */
+  }
+  
+  #image-container img {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+  }
+  /* Initial state for the fade effects */
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  /* Apply the fade-out effect */
+  #titleScreen.fade-out {
+    opacity: 0;
+  }
+  
+  /* Apply the fade-in effect */
+  #mainContent.fade-in {
+    opacity: 1;
+    visibility: visible;
+  }
+  .small_pink {
+    margin-top: 75px;
+    max-width: 400px !important; /* Force the size to take priority */
+    height: auto !important;
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: -500px;
+}
+
+.slideshow-image {
+  width: 100%;
+  display: none; /* Hide images initially */
+}
+
+.slideshow-image.active {
+  display: block; /* Show the active image */
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1); /* Black background with 80% opacity */
+  color: rgb(0, 0, 0);
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  padding: 10px 0;
+}
+/* Cart Page Styles */
+.cart-page {
+  max-width: 900px;
+  margin: 0 auto; /* Center the cart page horizontally */
+  padding-top: 50px; /* Adjusted top padding for better positioning */
+  text-align: center; /* Center content inside .cart-page */
+}
+
+#cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto;
+}
+
+#cart-table th, #cart-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#cart-table th {
+  background-color: #f8f8f8;
+}
+
+#cart-table input[type="number"] {
+  width: 50px;
+  text-align: center;
+}
+
+#cart-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center; /* Center the total text */
+}
+
+#checkout-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+  background-color: #555;
+}
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.popup h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+
+
+
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  header {
+      padding: 10px; /* Reduce padding to save space */
+  }
+
+  header h1 {
+      font-size: 1.2rem; /* Smaller header text */
+      margin-bottom: 5px; /* Reduce spacing below header text */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack links vertically */
+      gap: 5px; /* Reduce gap between links */
+  }
+
+  nav ul li a {
+      font-size: 0.9rem; /* Smaller font size for links */
+      padding: 5px 0; /* Add padding for better tap targets */
+  }
+}
+/* Hide the navigation by default on mobile */
+@media (max-width: 768px) {
+  #mobile-nav {
+      display: none;
+  }
+
+  #toggle-nav {
+      cursor: pointer; /* Make the "PRJCT X" link clickable */
+  }
+}
+
+/* Show the navigation when toggled */
+#mobile-nav.show {
+  display: block; /* Display the nav when the 'show' class is added */
+}
+#product-component-1731961572437 {
+  padding-top: 50px; /* Adjust the value to your preferred amount of padding */
+  max-width: 53%;
+  max-height: auto;
+}
+
+
+#product-component-1731962121571 {
+  padding-top: 60px; /* Adjust the value to your preferred amount of padding */
+  max-width: 53%;
+  max-height: auto;
+}
+
+
+    
