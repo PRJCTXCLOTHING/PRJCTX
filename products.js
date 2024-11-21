@@ -17,25 +17,8 @@ const products = [
         name: 'PRJCT X CAMO SHORTS PINK',
         price: '$20.00',
         link: 'pinkshorts.html'
-    },
-    {
-        image: 'images/product4.jpg',
-        name: 'Product 4',
-        price: '$35.00',
-        link: 'product4.html'
-    },
-    {
-        image: 'images/product5.jpg',
-        name: 'Product 5',
-        price: '$40.00',
-        link: 'product5.html'
-    },
-    {
-        image: 'images/product6.jpg',
-        name: 'Product 6',
-        price: '$50.00',
-        link: 'product6.html'
     }
+   
 ];
 
 // Function to display products dynamically
