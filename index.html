@@ -24,7 +24,7 @@
         <h1>PRJCT X</h1>
 
         <img src="images/PRJCT_X.PNG" alt="Brand Image" class="hero-image" />
-        <h2>Born to be great</h2>
+        <h2 style="margin-bottom: 20px">Born to be great</h2>
         <button class="enter-shop-btn" id="enterButton">Enter Shop</button>
       </div>
     </div>
@@ -42,7 +42,125 @@
             <li><a href="all_products.html">Shop All</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <h2>Welcome to PRJCT X</h2>
+        <p>Make your mark.</p>
+      </section>
+      <!-- Slideshow Section -->
+      <div class="slideshow-container">
+        <div class="slide">
+          <img
+            src="images/HomePageimage/Julius1.jpg"
+            alt="Slideshow Image 1"
+            class="slideshow-image"
+          />
+        </div>
+        <!-- Additional images will be dynamically added here -->
+      </div>
+
+      <!-- Featured Products Section -->
+      <section id="featured">
+        <h3>Featured Products</h3>
+        <div class="product-grid" id="featured-product-grid">
+          <!-- Featured products will be dynamically inserted here by JavaScript -->
+        </div>
+        <a href="all_products.html" class="underline-link"
+          >View more products</a
+        >
+      </section>
+
+      <!-- Product Listings Section -->
+
+      <!-- About Section -->
+      <section id="about">
+        <h3>About Us</h3>
+        <p>
+          PRJCT X is dedicated to providing top-quality products and great
+          customer service. We strive to meet the highest of standards in
+          product quality, comfort, and customer service.
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h3>Contact Us</h3>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 PRJCT X. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="products.js"></script>
+    <!-- Link to the products JavaScript file -->
+    <script>
+      // Initialize the display of products when the page loads
+      window.onload = function () {
+        displayProducts("featured"); // Call the function to display only 2 products in featured
+      };
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Link to Google Fonts for Playfair Display -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your CSS -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRJCT X</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to an external CSS file -->
+  </head>
+
+  <body>
+    <!-- Title Screen -->
+    <div class="title-screen" id="titleScreen">
+      <!-- Spinning Logo -->
+      <div>
+        <h1>PRJCT X</h1>
+
+        <img src="images/PRJCT_X.PNG" alt="Brand Image" class="hero-image" />
+        <h2 style="margin-bottom: 20px">Born to be great</h2>
+        <button class="enter-shop-btn" id="enterButton">Enter Shop</button>
+      </div>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div class="main-content" id="mainContent" style="display: none">
+      <div class="logo"></div>
+
+      <!-- Header -->
+      <header>
+        <h1><a href="#" id="toggle-nav">PRJCT X</a></h1>
+        <nav id="mobile-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="all_products.html">Shop All</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
