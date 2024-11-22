@@ -3,7 +3,7 @@ const products = [
   {
     image: "images/coverhoodie.png",
     name: "PRJCT X CROSS HOODIE PINK",
-    price: "$̶7̶5̶.0̶0̶  $65.00",
+    price: "$̶7̶5̶.0̶0̶  $55.00",
     link: "pink.html", // Link to the individual product page
   },
   {
