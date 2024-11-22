@@ -9,7 +9,7 @@ const products = [
   {
     image: "images/pink_shorts.jpg",
     name: "PRJCT X CAMO SHORTS PINK",
-    price: "$20.00",
+    price: "$30.00",
     link: "pinkshorts.html",
   },
   {
